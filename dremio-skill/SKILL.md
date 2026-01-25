@@ -46,6 +46,23 @@ Use the REST API for lower-level integrations or when the SDK/CLI does not cover
 - **Reference**: `knowledge/api.md`
 - **Base URL**: `https://api.dremio.cloud/v0/` (Cloud) or Software equivalent.
 
+## Environment & Configuration
+The following environment variables are available in `template.env` and the user should rename this file to `.env` and add it to their `.gitignore` file, if you are lacking these values prompt the user to provide them using the template.env file as a reference. These variables should be used to initialize clients:
+
+| Variable | Description | Usage in Python (`dremioframe`) | Usage in CLI |
+| :--- | :--- | :--- | :--- |
+| `DREMIO_ENDPOINT` | Coordinator URL (Cloud) | `DremioClient(endpoint=os.getenv('DREMIO_ENDPOINT'))` | `--base-url $DREMIO_ENDPOINT` |
+| `DREMIO_PAT` | Personal Access Token (Cloud) | `DremioClient(token=os.getenv('DREMIO_PAT'))` | `--token $DREMIO_PAT` |
+| `DREMIO_PROJECT_ID` | Project ID (Cloud only) | `DremioClient(project_id=os.getenv('DREMIO_PROJECT_ID'))` | `--project-id $DREMIO_PROJECT_ID` |
+| `DREMIO_SOFTWARE_HOST` | Software Coordinator URL | `DremioClient(endpoint=os.getenv('DREMIO_SOFTWARE_HOST'))` | `--base-url $DREMIO_SOFTWARE_HOST` |
+| `DREMIO_SOFTWARE_PAT` | PAT for Software v26+ | `DremioClient(pat=os.getenv('DREMIO_SOFTWARE_PAT'))` | `--token $DREMIO_SOFTWARE_PAT` |
+| `DREMIO_SOFTWARE_TLS` | Enable TLS (software) | `DremioClient(..., tls=os.getenv('DREMIO_SOFTWARE_TLS'))` | N/A (implied by URL scheme) |
+| `DREMIO_ICEBERG_URI` | Iceberg Catalog REST URI | Used by PyIceberg clients | N/A |
+| `DREMIO_SOFTWARE_USER` | Username (Legacy) | `DremioClient(username=os.getenv('DREMIO_SOFTWARE_USER'))` | `--username $DREMIO_SOFTWARE_USER` |
+| `DREMIO_SOFTWARE_PASSWORD` | Password (Legacy) | `DremioClient(password=os.getenv('DREMIO_SOFTWARE_PASSWORD'))` | `--password $DREMIO_SOFTWARE_PASSWORD` |
+
+
+
 ## Usage Guidelines
 
 - **Always** prefer the Python SDK for automation scripts unless the user specifically asks for CLI or direct API calls.
