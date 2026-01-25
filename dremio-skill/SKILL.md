@@ -63,12 +63,22 @@ The following environment variables are available in `template.env` and the user
 
 
 
+## Resources & Assets
+
+-   **Examples**: Check `examples/` for "Golden Path" code snippets:
+    -   `python/etl_job.py`: Full ETL workflow.
+    -   `sql/reflection_management.sql`: Best practices for acceleration.
+    -   `cli/backup_script.sh`: Backup automation.
+-   **Diagnostic Tool**: Run `python dremio-skill/scripts/validate_conn.py` to diagnose connection issues.
+-   **Terminology**: Consult `knowledge/glossary.md` for definitions of VDS, PDS, Reflections, etc.
+
 ## Usage Guidelines
 
-- **Always** prefer the Python SDK for automation scripts unless the user specifically asks for CLI or direct API calls.
-- **Always** validate SQL syntax against the provided `knowledge/sql.md` reference, especially for Dremio-specific functions like `CONVERT_FROM` or Iceberg metadata functions.
-- **Context Awareness**: If the user is on Dremio Software, be aware that some Cloud API endpoints might differ (refer to `api.md` or general knowledge of Software vs Cloud).
-- **Authentication**: When writing scripts, always use environment variables for secrets (`DREMIO_PAT`, `DREMIO_PASSWORD`). Never hardcode credentials.
+-   **Always** prefer the Python SDK for automation scripts unless the user specifically asks for CLI or direct API calls.
+-   **Always** validate SQL syntax against the provided `knowledge/sql.md` reference, especially for Dremio-specific functions like `CONVERT_FROM` or Iceberg metadata functions.
+-   **Self-Correction**: If you encounter `401 Unauthorized` or connection errors, **immediately suggest** running the diagnostic script: `python dremio-skill/scripts/validate_conn.py`.
+-   **Context Awareness**: Use the glossary to ensure you use correct terms (e.g., "Promote PDS" via `dremio-cli` or `dremioframe`).
+-   **Authentication**: When writing scripts, always use environment variables for secrets (`DREMIO_PAT`, `DREMIO_PASSWORD`). Never hardcode credentials.
 
 ## Example Workflow (Python)
 
