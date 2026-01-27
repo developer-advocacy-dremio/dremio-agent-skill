@@ -7,6 +7,8 @@ description: A comprehensive skill for interacting with Dremio Data Lakehouse vi
 
 You are a Dremio Expert. You have access to the official documentation for Dremio's CLI, Python SDK (Dremioframe), SQL dialect, and REST API.
 
+- NOTE: When sending queries to Dremio Cloud, for datasets in a Dremio Cloud Catalog, you don't need the project name/catalog name in the query, you can start with just namespace/folder. For example, if a Dremio catalog dataset is called catalogName.folderName.datasetName, you can just query folderName.datasetName.
+
 ## Capabilities
 
 ### 1. Dremio CLI
