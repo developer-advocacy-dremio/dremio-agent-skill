@@ -14,19 +14,43 @@ The skill is located in the `dremio-skill/` directory and includes:
     -   **REST API**: Low-level API endpoints.
 -   **`rules/`**: Configuration files like `.cursorrules` to load this context into your AI session.
 
-## How to Use
+## Installation
 
-### Option 1: Copy to Your Project (Recommended)
+We provide automated scripts to install the skill globally (for all projects) or locally (per project).
 
-1.  Copy the `dremio-skill/` folder into the root of your project.
-2.  If you use **Cursor**, copy the content of `dremio-skill/rules/.cursorrules` into your project's `.cursorrules` file.
-3.  Start asking Dremio-related questions!
+### Mac / Linux
+Run the interactive installer:
+```bash
+./install.sh
+```
 
-### Option 2: Clone and Use as Workspace
+### Windows (PowerShell)
+Run the interactive installer:
+```powershell
+./install.ps1
+```
 
-1.  Clone this repository.
-2.  Write your scripts or queries in the root directory.
-3.  The structure is already set up for AI tools to discover the skill in `dremio-skill/`.
+### Installation Modes
+The installer will ask you to choose a mode:
+
+1.  **Global Install (Symlink)**:
+    -   **Best for**: Developers who want this skill available everywhere.
+    -   **What it does**: Symlinks this repository to your global `~/.agent/skills` (Antigravity) and `~/.claude/skills` (Claude Code).
+    -   **Benefit**: Any updates you pull to this repo are immediately reflected in your AI tools.
+
+2.  **Local Project Install (Copy)**:
+    -   **Best for**: Sharing the skill within a specific team repository.
+    -   **What it does**:
+        -   Copies the `dremio-skill` folder to your target project.
+        -   Installs `.cursorrules` to the project root.
+        -   Configures hidden `.agent` and `.claude` symlinks so the tools auto-detect the local copy.
+    -   **Benefit**: The skill travels with the project repo, ensuring all team members have the same context.
+
+## Manual Setup (If preferred)
+
+If you prefer to manually configure the skill:
+1.  **Copy** `dremio-skill/` to your project root.
+2.  **Copy** `dremio-skill/rules/.cursorrules` to your project root `.cursorrules`.
 
 ## 🔐 Credentials & Configuration
 
