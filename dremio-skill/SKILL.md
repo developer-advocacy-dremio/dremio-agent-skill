@@ -24,9 +24,9 @@ Use the CLI for administrative tasks, content management, and CI/CD workflows.
     - Exporting/Importing catalog content.
     - Managing users and roles (if standard CLI).
 
-### 2. Dremio Python SDK (dremioframe/simple)
+### 2. Dremio Python SDK (dremioframe)
 Use the Python SDK for scripting data operations, automation, and data engineering workflows.
-- **Reference**: `knowledge/python.md`
+- **Reference**: `knowledge/python/` (See `ingestion_overview.md`, `transformation_guide.md`, etc.)
 - **Import Pattern**: `from dremioframe.simple import DremioClient`
 - **Key Features**:
     - Authenticate using PAT or Username/Password.
@@ -35,7 +35,7 @@ Use the Python SDK for scripting data operations, automation, and data engineeri
 
 ### 3. SQL
 Use Dremio SQL for querying data, manipulating Iceberg tables, and defining views.
-- **Reference**: `knowledge/sql.md`
+- **Reference**: `knowledge/sql/` (See `sql_commands.md`, `iceberg_functions.md`)
 - **Key Features**:
     - ANSI SQL compliant.
     - Iceberg DML (`UPDATE`, `DELETE`, `MERGE`, `OPTIMIZE`).
