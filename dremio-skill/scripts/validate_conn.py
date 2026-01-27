@@ -76,6 +76,26 @@ def validate_connection():
         
         if response.status_code == 200:
             print("✅ Connection Successful! API responded with 200 OK.")
+            
+            # 3. Deep Check: Validate 'Samples' Source
+            print("\nChecking for 'Samples' source...")
+            try:
+                # Dremio Cloud uses catalog/ vs project/ structure, but standard catalog endpoint works usually
+                # We'll try to list sources.
+                catalog_url = f"{base_url}/api/v3/catalog"
+                cat_resp = requests.get(catalog_url, headers=headers, timeout=10)
+                if cat_resp.status_code == 200:
+                    data = cat_resp.json().get("data", [])
+                    samples_found = any(item.get("path", []) == ["Samples"] for item in data)
+                    if samples_found:
+                        print("✅ 'Samples' source found.")
+                    else:
+                        print("⚠️  'Samples' source NOT found. Some examples may not work.")
+                else:
+                    print(f"⚠️  Could not list catalog (Status {cat_resp.status_code}). Skipping deep check.")
+            except Exception as e:
+                print(f"⚠️  Deep check failed: {e}")
+
         elif response.status_code == 401:
             print("❌ Authentication Failed (401). Check your PAT or Username/Password.")
         elif response.status_code == 403:
