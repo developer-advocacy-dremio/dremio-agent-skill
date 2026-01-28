@@ -67,6 +67,12 @@ Use these step-by-step guides when the user asks for high-level architectural he
     - Semantic Layer (Medallion Architecture)
     - Reflection Strategy (Performance)
     - Source Onboarding
+    - Query Triage (Debugging)
+    - Iceberg Maintenance (Optimize/Vacuum)
+    - Security Model (RBAC/RLS)
+    - Workload Management (Queues)
+    - Data Quality (Validation)
+    - Visualization Guide
 
 ## Environment & Configuration
 The following environment variables are available in `template.env` and the user should rename this file to `.env` and add it to their `.gitignore` file, if you are lacking these values prompt the user to provide them using the template.env file as a reference. These variables should be used to initialize clients:
