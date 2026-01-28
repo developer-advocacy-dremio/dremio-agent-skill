@@ -8,6 +8,9 @@ Connect external data systems to Dremio so they can be queried and virtualized.
 ## 2. Discovery Phase (Ask the User)
 1.  **Type**: "What type of source is it? (Object Storage, Relational DB, Metastore?)"
 2.  **Auth**: "Do you have the credentials? (Access Key/Secret, Username/Password, Role ARN?)"
+
+_DO NOT ASK FOR USER CREDENTIALS. IF THE USER DOES NOT HAVE THE CREDENTIALS, GIVE THE USER SPECIFIC VARIABLES THEY SHOULD DEFINE IN THEIR `.env` FILE FOR YOU TO LEVERAGE, NEVER DIRECTLY USE CREDENTIALS FROM THE USER._
+
 3.  **Privileges**: "Do you need it to be Read-Only or Read-Write?"
 4.  **Network**: "Is the source accessible from the Dremio environment (VPC peering, allow-listing)?"
 
