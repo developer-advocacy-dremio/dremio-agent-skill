@@ -60,6 +60,14 @@ Use the REST API for lower-level integrations or when the SDK/CLI does not cover
 - **Reference**: `knowledge/api.md`
 - **Base URL**: `https://api.dremio.cloud/v0/` (Cloud) or Software equivalent.
 
+### 5. Task Wizards (Workflows)
+Use these step-by-step guides when the user asks for high-level architectural help (e.g. "How do I build a lakehouse?").
+- **Reference**: `wizards/wizard-tree.md`
+- **Available Wizards**:
+    - Semantic Layer (Medallion Architecture)
+    - Reflection Strategy (Performance)
+    - Source Onboarding
+
 ## Environment & Configuration
 The following environment variables are available in `template.env` and the user should rename this file to `.env` and add it to their `.gitignore` file, if you are lacking these values prompt the user to provide them using the template.env file as a reference. These variables should be used to initialize clients:
 
