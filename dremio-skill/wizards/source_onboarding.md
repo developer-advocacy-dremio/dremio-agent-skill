@@ -28,6 +28,9 @@ Connect external data systems to Dremio so they can be queried and virtualized.
 ## 4. Execution Steps (For the Agent)
 1.  **Prepare Config**: Construct the config dictionary based on user input.
     *   *Tip*: Use `dremioframe` documentation or `generate_api_call` to find correct JSON payload structure for `POST /api/v3/catalog/source`.
+
+    If you can't find the source details in the knowledge base, then go here to discover details for the particular source: https://docs.dremio.com/dremio-cloud/bring-data/connect/.
+
 2.  **Create Source**:
     ```python
     source_config = {"name": "my_s3", "type": "S3", "config": {...}}
