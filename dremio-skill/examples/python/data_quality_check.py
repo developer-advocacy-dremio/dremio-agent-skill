@@ -43,7 +43,7 @@ def run_dq_checks():
     """
     
     try:
-        df = client.query_to_pandas(sql)
+        df = client.query(sql)
         row = df.iloc[0]
         
         # Define Thresholds

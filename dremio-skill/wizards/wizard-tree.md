@@ -10,8 +10,11 @@ This directory contains specialized guides that walk the Agent through complex w
 - [Reflection Strategy Wizard](reflection_strategy.md) - *Performance Optimization*
     - Use when: User asks about slow queries, dashboards, or "optimization".
     
-- [Source Onboarding Wizard](source_onboarding.md) - *Connecting Data*
+- [Search Onboarding Wizard](source_onboarding.md) - *Connecting Data*
     - Use when: User wants to connect S3, Postgres, Snowflake, or other sources.
+
+- [Profile Maker Wizard](profile_maker.md) - *Connection Setup*
+    - Use when: User needs to configure CLI/SDK, "connect to dremio", or fix "no profile" errors.
 
 - [Query Triage Wizard](query_triage.md) - *Diagnosing Slow Queries*
     - Use when: User complains about "slow" performance or asks for "debugging" help.

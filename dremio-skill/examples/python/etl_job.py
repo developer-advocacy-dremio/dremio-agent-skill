@@ -75,7 +75,7 @@ def run_etl_job():
     # 3. Validation / Quality Check
     # Verify the view works
     try:
-        df = client.query_to_pandas(f"SELECT COUNT(*) as cnt FROM {silver_view_path}")
+        df = client.query(f"SELECT COUNT(*) as cnt FROM {silver_view_path}")
         print(f"Verification successful. Row count: {df.iloc[0]['cnt']}")
     except Exception as e:
         print(f"Verification failed: {e}")

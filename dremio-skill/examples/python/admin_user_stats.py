@@ -42,7 +42,7 @@ def run_stats():
     """
     
     try:
-        df_jobs = client.query_to_pandas(sql_jobs)
+        df_jobs = client.query(sql_jobs)
         if not df_jobs.empty:
             print("\nUser Activity Summary:")
             print(df_jobs.to_markdown(index=False)) # Markdown table format
@@ -63,7 +63,7 @@ def run_stats():
     """
     
     try:
-        df_ref = client.query_to_pandas(sql_reflections)
+        df_ref = client.query(sql_reflections)
         print(df_ref)
     except Exception as e:
         print(f"Could not query sys.reflections: {e}")

@@ -40,18 +40,18 @@ Use the CLI for administrative tasks, content management, and CI/CD workflows.
 
 ### 2. Dremio Python SDK (dremioframe)
 Use the Python SDK for scripting data operations, automation, and data engineering workflows.
-- **Reference**: `knowledge/python/` (See `ingestion_overview.md`, `transformation_guide.md`, etc.)
+- **Reference**: `knowledge/python/` (see details in knowledge-tree.md)
 - **Import Pattern**: `from dremioframe.client import DremioClient`
 - **Key Features**:
     - Authenticate using PAT or Username/Password.
-    - `client.query_to_pandas(sql)` for dataframes.
+    - `client.query(sql)` for dataframes.
     - `client.catalog.create_source()`, `client.catalog.get()` for metadata.
 
 note: as of version 0.24.0 dremioframe also supports `~/.dremio/profiles.yaml` for authentication. See `knowledge/python/setup_and_configuration.md` for more information.
 
 ### 3. SQL
 Use Dremio SQL for querying data, manipulating Iceberg tables, and defining views.
-- **Reference**: `knowledge/sql/` (See `sql_commands.md`, `iceberg_functions.md`)
+- **Reference**: `knowledge/sql/` (see details in knowledge-tree.md)
 - **Key Features**:
     - ANSI SQL compliant.
     - Iceberg DML (`UPDATE`, `DELETE`, `MERGE`, `OPTIMIZE`).
@@ -75,6 +75,7 @@ Use these step-by-step guides when the user asks for high-level architectural he
     - Workload Management (Queues)
     - Data Quality (Validation)
     - Visualization Guide
+    - Profile Maker (Connection Setup)
 
 ## Environment & Configuration
 The following environment variables are available in `template.env` and the user should rename this file to `.env` and add it to their `.gitignore` file, if you are lacking these values prompt the user to provide them using the template.env file as a reference. These variables should be used to initialize clients:
@@ -123,6 +124,6 @@ client = DremioClient(
 )
 
 # Query
-df = client.query_to_pandas("SELECT * FROM Samples.\"samples.dremio.com\".\"NYC-taxi-trips\" LIMIT 10")
+df = client.query("SELECT * FROM Samples.\"samples.dremio.com\".\"NYC-taxi-trips\" LIMIT 10")
 print(df.head())
 ```

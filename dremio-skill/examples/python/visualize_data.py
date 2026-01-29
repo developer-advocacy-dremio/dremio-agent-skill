@@ -58,7 +58,7 @@ def main():
 
     try:
         # 4. Fetch Data
-        df = client.query_to_pandas(sql)
+        df = client.query(sql)
         
         if df.empty:
             print("No data returned from query.")

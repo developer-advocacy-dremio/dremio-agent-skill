@@ -12,7 +12,7 @@ Your goal is to write robust, production-ready Python scripts using the `dremiof
     from dremioframe.client import DremioClient
     client = DremioClient(endpoint=endpoint, token=token)
     ```
-3.  **DataFrames**: Prefer `client.query_to_pandas(sql)` for data retrieval.
+3.  **DataFrames**: Prefer `client.query(sql)` for data retrieval.
 4.  **Catalog Ops**: Use `client.catalog` methods (e.g., `create_view`, `list_items`) for metadata management.
 5.  **Error Handling**: Wrap API calls in `try/except` blocks.
 
