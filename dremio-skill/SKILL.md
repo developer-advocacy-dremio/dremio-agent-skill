@@ -47,6 +47,8 @@ Use the Python SDK for scripting data operations, automation, and data engineeri
     - `client.query_to_pandas(sql)` for dataframes.
     - `client.catalog.create_source()`, `client.catalog.get()` for metadata.
 
+note: as of version 0.24.0 dremioframe also supports `~/.dremio/profiles.yaml` for authentication. See `knowledge/python/setup_and_configuration.md` for more information.
+
 ### 3. SQL
 Use Dremio SQL for querying data, manipulating Iceberg tables, and defining views.
 - **Reference**: `knowledge/sql/` (See `sql_commands.md`, `iceberg_functions.md`)
