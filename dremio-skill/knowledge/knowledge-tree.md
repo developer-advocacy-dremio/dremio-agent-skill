@@ -1,93 +1,14 @@
 # Knowledge Tree
-This file maps all available documentation in the knowledge base.
+This file maps the available documentation in the `knowledge/` directory.
 
-- [api.md](api.md) - *Dremio Cloud API Reference*
-- [cli.md](cli.md) - *Dremio CLI Documentation*
-- [glossary.md](glossary.md) - *Dremio Terminology & Glossary*
-  - **clidocs/**
-    - [dremioclidocs.md](clidocs/dremioclidocs.md) - *Dremio CLI Documentation*
-  - **sql/**
-    - [data_types.md](sql/data_types.md) - *`Data Types`...*
-    - [information_schema.md](sql/information_schema.md) - *Dremio stores metadata for the objects in your pro...*
-    - [intro.md](sql/intro.md) - *Dremio Docs in One PDF*
-    - [reserved_words.md](sql/reserved_words.md) - *Dremio reserves ANSI keywords and additional keywo...*
-    - [sql_commands.md](sql/sql_commands.md) - *Dremio supports querying using standard `SELECT` s...*
-    - [sql_functions.md](sql/sql_functions.md) - *Returns the absolute value of the argument....*
-    - [system_tables.md](sql/system_tables.md) - *System tables make up Dremio's system-created cata...*
-    - [table_functions.md](sql/table_functions.md) - *Table functions in Dremio return a table as a resu...*
-  - **python/**
-    - [.md](python/.md) - *...*
-    - [advanced_usage.md](python/advanced_usage.md) - *Advanced Usage*
-    - [ai_integrations.md](python/ai_integrations.md) - *Ai Integrations*
-    - [catalog_admin.md](python/catalog_admin.md) - *Catalog Admin*
-    - [check_history.md](python/check_history.md) - *Check history*
-    - [classify.md](python/classify.md) - *Classify*
-    - [clear_history.md](python/clear_history.md) - *Clear history*
-    - [complete.md](python/complete.md) - *Complete*
-    - [creating_semantic_views.md](python/creating_semantic_views.md) - *Creating Semantic Views*
-    - [creating_tables.md](python/creating_tables.md) - *Creating Tables*
-    - [data_export.md](python/data_export.md) - *Data Export*
-    - [data_lineage.md](python/data_lineage.md) - *Data Lineage*
-    - [data_lineage_tracking.md](python/data_lineage_tracking.md) - *Data Lineage Tracking*
-    - [data_quality.md](python/data_quality.md) - *Data Quality*
-    - [dataframe_builder.md](python/dataframe_builder.md) - *Dataframe Builder*
-    - [dimensional_modeling_guide.md](python/dimensional_modeling_guide.md) - *Dimensional Modeling Guide*
-    - [export_formats.md](python/export_formats.md) - *Export Formats*
-    - [iceberg_management.md](python/iceberg_management.md) - *Iceberg Management*
-    - [ingestion_and_loading.md](python/ingestion_and_loading.md) - *Ingestion And Loading*
-    - [integrations.md](python/integrations.md) - *Integrations*
-    - [interactive_cli_chat.md](python/interactive_cli_chat.md) - *Interactive CLI Chat*
-    - [medallion_architecture.md](python/medallion_architecture.md) - *Medallion Architecture*
-    - [orchestration.md](python/orchestration.md) - *Orchestration*
-    - [orchestration_and_pipelines.md](python/orchestration_and_pipelines.md) - *Orchestration And Pipelines*
-    - [performance_tuning.md](python/performance_tuning.md) - *Performance Tuning*
-    - [process_all_text_files_in_a_folder.md](python/process_all_text_files_in_a_folder.md) - *Process all text files in a folder*
-    - [query_templates.md](python/query_templates.md) - *Query Templates*
-    - [raw_sql_querying.md](python/raw_sql_querying.md) - *Raw SQL Querying*
-    - [reflections.md](python/reflections.md) - *Reflections*
-    - [run_a_native_postgres_query.md](python/run_a_native_postgres_query.md) - *Run a native Postgres query*
-    - [save_to_csv.md](python/save_to_csv.md) - *Save to CSV*
-    - [save_to_json.md](python/save_to_json.md) - *Save to JSON*
-    - [security.md](python/security.md) - *Security*
-    - [setup_and_configuration.md](python/setup_and_configuration.md) - *Setup And Configuration*
-    - [sorting_and_distinct.md](python/sorting_and_distinct.md) - *Sorting and Distinct*
-    - [testing.md](python/testing.md) - *Testing*
-    - [transformations.md](python/transformations.md) - *Transformations*
-    - [tutorial_building_a_production_etl_pipeline.md](python/tutorial_building_a_production_etl_pipeline.md) - *Tutorial: Building a Production ETL Pipeline*
-    - [update_a_view_fetches_latest_version_tag_automatic.md](python/update_a_view_fetches_latest_version_tag_automatic.md) - *Update a view (fetches latest version tag automatically)*
-    - [visualization.md](python/visualization.md) - *Visualization*
-    - [with_specific_model.md](python/with_specific_model.md) - *With specific model*
-    - [working_with_files.md](python/working_with_files.md) - *Working with Files*
-    - [you_can_then_chain_dremioframe_operations_on_top.md](python/you_can_then_chain_dremioframe_operations_on_top.md) - *You can then chain DremioFrame operations on top*
-  - **dremiodocs/**
-    - **aggregate/**
-    - **dremio-cloud/**
-      - [cloud-api-reference.md](dremiodocs/dremio-cloud/cloud-api-reference.md) - *Dremio Cloud API Reference*
-      - [dremio-cloud-about.md](dremiodocs/dremio-cloud/dremio-cloud-about.md) - *What is Dremio Cloud? | Dremio Documentation*
-      - [dremio-cloud-admin.md](dremiodocs/dremio-cloud/dremio-cloud-admin.md) - *Administration | Dremio Documentation*
-      - [dremio-cloud-bring-data.md](dremiodocs/dremio-cloud/dremio-cloud-bring-data.md) - *Bring Your Data | Dremio Documentation*
-      - [dremio-cloud-changelog.md](dremiodocs/dremio-cloud/dremio-cloud-changelog.md) - *Changelog | Dremio Documentation*
-      - [dremio-cloud-developer.md](dremiodocs/dremio-cloud/dremio-cloud-developer.md) - *Developer Guide | Dremio Documentation*
-      - [dremio-cloud-explore-analyze.md](dremiodocs/dremio-cloud/dremio-cloud-explore-analyze.md) - *Explore and Analyze Your Data | Dremio Documentation*
-      - [dremio-cloud-get-started.md](dremiodocs/dremio-cloud/dremio-cloud-get-started.md) - *Get Started with Dremio Cloud | Dremio Documentation*
-      - [dremio-cloud-help-support.md](dremiodocs/dremio-cloud/dremio-cloud-help-support.md) - *Help and Support | Dremio Documentation*
-      - [dremio-cloud-manage-govern.md](dremiodocs/dremio-cloud/dremio-cloud-manage-govern.md) - *Manage and Govern Your Data | Dremio Documentation*
-      - [dremio-cloud-overview.md](dremiodocs/dremio-cloud/dremio-cloud-overview.md) - *Overview | Dremio Documentation*
-      - [dremio-cloud-security.md](dremiodocs/dremio-cloud/dremio-cloud-security.md) - *Security and Compliance | Dremio Documentation*
-      - [sql-docs.md](dremiodocs/dremio-cloud/sql-docs.md) - *Dremio Docs in One PDF*
-    - **dremio-software/**
-      - [dremio-software-acceleration.md](dremiodocs/dremio-software/dremio-software-acceleration.md) - *Dremio Software - Acceleration*
-      - [dremio-software-admin.md](dremiodocs/dremio-software/dremio-software-admin.md) - *Dremio Software - Admin*
-      - [dremio-software-client-applications.md](dremiodocs/dremio-software/dremio-software-client-applications.md) - *Dremio Software - Client Applications*
-      - [dremio-software-data-products.md](dremiodocs/dremio-software/dremio-software-data-products.md) - *Dremio Software - Data Products*
-      - [dremio-software-data-sources.md](dremiodocs/dremio-software/dremio-software-data-sources.md) - *Dremio Software - Data Sources*
-      - [dremio-software-deploy-dremio.md](dremiodocs/dremio-software/dremio-software-deploy-dremio.md) - *Dremio Software - Deploy Dremio*
-      - [dremio-software-get-started.md](dremiodocs/dremio-software/dremio-software-get-started.md) - *Dremio Software - Get Started*
-      - [dremio-software-monitoring.md](dremiodocs/dremio-software/dremio-software-monitoring.md) - *Dremio Software - Monitoring*
-      - [dremio-software-reference.md](dremiodocs/dremio-software/dremio-software-reference.md) - *Dremio Software - Reference*
-      - [dremio-software-security.md](dremiodocs/dremio-software/dremio-software-security.md) - *Dremio Software - Security*
-      - [dremio-software-v25-api.md](dremiodocs/dremio-software/dremio-software-v25-api.md) - *Dremio API Documentation - dremio-software-v25-api.md*
-      - [dremio-software-v26-api.md](dremiodocs/dremio-software/dremio-software-v26-api.md) - *Dremio API Documentation - dremio-software-v26-api.md*
-  - **pythondocs/**
-    - [dremioframe_docs.md](pythondocs/dremioframe_docs.md) - *Administration*
+## Main Documentation
+- **[python/tree.md](python/tree.md)** - **Python SDK (DremioFrame)**: The primary tool for automation and data engineering. Go here for connecting, querying, and transforming data.
+- **[sql/tree.md](sql/tree.md)** - **SQL Reference**: Documentation for SQL commands, functions, and system tables.
+- **[cli.md](cli.md)** - **CLI Documentation**: Guide for using the Dremio CLI for administration and CI/CD.
+- **[api.md](api.md)** - **REST API**: Reference for the Dremio REST API (Cloud & Software).
+
+## Reference
+- **[glossary.md](glossary.md)** - Definitions of key Dremio terms (VDS, PDS, Reflection, etc.).
+
+
 

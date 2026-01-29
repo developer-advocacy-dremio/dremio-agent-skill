@@ -118,10 +118,10 @@ Once configured, the AI can simply use `dremio --profile cloud-profile ...` in i
 
 This skill is designed for **Agentic Coding Tools** that support the `SKILL.md` standard or context loading via `.cursorrules`.
 
--   **Google Antigravity**: Fully supported. Discoverable via `SKILL.md`.
+-   **Google Antigravity**: Fully supported. Discoverable via `SKILL.md`. (You may want to start a new chat asking Antigravity to scan for available skills)
 -   **Claude Code**: Supported in latest versions via `dremio-skill/SKILL.md` or `.clauderc`.
 -   **Cursor / VS Code**: Supported by copying `dremio-skill/rules/.cursorrules` to your project root.
--   **Other Agents**: Any agent that can read Markdown documentation in the `dremio-skill/knowledge` folder.
+-   **Other Agents**: Any agent that can read Markdown documentation in the `dremio-skill/knowledge` folder, just tell them to read the /dremio-skill/SKILL.md file.
 
 ## 🗣️ Example Prompts
 

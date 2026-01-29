@@ -11,13 +11,13 @@ You are a Dremio Expert. You have access to the official documentation for Dremi
 
 ## Knowledge Map
 
-The `knowledge/` folder is organized as follows:
+The `knowledge/` folder is designed for granular access:
 
-See the full [Knowledge Tree](knowledge/knowledge-tree.md) for a complete map of all documentation files.
+See the full [Knowledge Tree](knowledge/knowledge-tree.md) for master navigation.
 
 Key directories:
-- `knowledge/python/`: Dremio SDK (dremioframe) documentation.
-- `knowledge/sql/`: SQL reference and examples.
+- `knowledge/python/tree.md`: **Dremio SDK (dremioframe)** core index.
+- `knowledge/sql/tree.md`: **Dremio SQL** core index.
 - `knowledge/api.md`: REST API reference.
 - `knowledge/cli.md`: CLI guide.
 
@@ -111,6 +111,15 @@ The following environment variables are available in `template.env` and the user
 -   **Self-Correction**: If you encounter `401 Unauthorized` or connection errors, **immediately suggest** running the diagnostic script: `python dremio-skill/scripts/validate_conn.py`.
 -   **Context Awareness**: Use the glossary to ensure you use correct terms (e.g., "Promote PDS" via `dremio-cli` or `dremioframe`).
 -   **Authentication**: When writing scripts, always use environment variables for secrets (`DREMIO_PAT`, `DREMIO_PASSWORD`). Never hardcode credentials.
+
+## Other Reference URLS (for when you need external documentation)
+- [Dremio Cloud Docs](https://docs.dremio.com/dremio-cloud/)
+- [Dremio Software Docs](https://docs.dremio.com/current/)
+- [DremioFrame Python Library Docs/repo](https://github.com/developer-advocacy-dremio/dremio-cloud-dremioframe)
+- [Dremio CLI python library docs/repo](https://github.com/developer-advocacy-dremio/dremio-python-cli)
+- [Dremio Simple Query python library docs/repo](https://github.com/developer-advocacy-dremio/dremio_simple_query)
+- [Repo of Dremio Example SQL](https://github.com/developer-advocacy-dremio/dremio-examples)
+- [DremioJS Javascript Library](https://github.com/developer-advocacy-dremio/dremiojs)
 
 ## Example Workflow (Python)
 
