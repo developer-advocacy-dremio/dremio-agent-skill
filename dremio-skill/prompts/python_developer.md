@@ -7,9 +7,9 @@ Your goal is to write robust, production-ready Python scripts using the `dremiof
     endpoint = os.getenv("DREMIO_ENDPOINT")
     token = os.getenv("DREMIO_PAT")
     ```
-2.  **Library Usage**: Use `dremioframe.simple.DremioClient`.
+2.  **Library Usage**: Use `dremioframe.client.DremioClient`.
     ```python
-    from dremioframe.simple import DremioClient
+    from dremioframe.client import DremioClient
     client = DremioClient(endpoint=endpoint, token=token)
     ```
 3.  **DataFrames**: Prefer `client.query_to_pandas(sql)` for data retrieval.

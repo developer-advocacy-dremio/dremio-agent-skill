@@ -41,7 +41,7 @@ Use the CLI for administrative tasks, content management, and CI/CD workflows.
 ### 2. Dremio Python SDK (dremioframe)
 Use the Python SDK for scripting data operations, automation, and data engineering workflows.
 - **Reference**: `knowledge/python/` (See `ingestion_overview.md`, `transformation_guide.md`, etc.)
-- **Import Pattern**: `from dremioframe.simple import DremioClient`
+- **Import Pattern**: `from dremioframe.client import DremioClient`
 - **Key Features**:
     - Authenticate using PAT or Username/Password.
     - `client.query_to_pandas(sql)` for dataframes.
@@ -114,7 +114,7 @@ The following environment variables are available in `template.env` and the user
 
 ```python
 import os
-from dremioframe.simple import DremioClient
+from dremioframe.client import DremioClient
 
 # Initialize
 client = DremioClient(

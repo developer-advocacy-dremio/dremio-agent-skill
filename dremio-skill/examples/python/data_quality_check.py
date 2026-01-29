@@ -12,7 +12,7 @@ Description:
 
 import os
 import sys
-from dremioframe.simple import DremioClient
+from dremioframe.client import DremioClient
 from dotenv import load_dotenv
 
 def run_dq_checks():

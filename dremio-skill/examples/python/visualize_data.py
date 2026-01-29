@@ -16,7 +16,7 @@ Description:
 import os
 import sys
 import matplotlib.pyplot as plt
-from dremioframe.simple import DremioClient
+from dremioframe.client import DremioClient
 from dotenv import load_dotenv
 
 def main():
