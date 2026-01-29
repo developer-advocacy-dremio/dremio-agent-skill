@@ -44,6 +44,7 @@ Use the Python SDK for scripting data operations, automation, and data engineeri
 - **Import Pattern**: `from dremioframe.client import DremioClient`
 - **Key Features**:
     - Authenticate using PAT or Username/Password.
+    - Supports profiles `client = DremioClient(profile="cloud")`
     - `client.query(sql)` for dataframes.
     - `client.catalog.create_source()`, `client.catalog.get()` for metadata.
 
@@ -122,6 +123,7 @@ client = DremioClient(
     endpoint="https://api.dremio.cloud", 
     token=os.getenv("DREMIO_TOKEN")
 )
+# client = DremioClient(profile="cloud")
 
 # Query
 df = client.query("SELECT * FROM Samples.\"samples.dremio.com\".\"NYC-taxi-trips\" LIMIT 10")
