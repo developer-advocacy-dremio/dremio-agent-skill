@@ -158,3 +158,26 @@ Try these prompts to leverage the full power of the Dremio Skill:
 ### "Command Not Found" (CLI)
 -   **Install CLI**: Did you run `pip install dremio-cli`?
 -   **Profile**: Did you create a profile using `dremio profile create`? The AI usually assumes a profile exists.
+
+
+## 🤖 Agent Best Practices
+
+To ensure the AI deterministically uses this skill, follow these rules:
+
+### 1. For Coding Tools that Don't support skills (OpenCode, etc.)
+If you are using a web-based chat interface that doesn't support automatic context loading:
+1.  copy the `.cursorrules` and `AGENTS.MD` files in the `dremio-skill/rules` to the root of the repo or copy their contents to your existing `.cursorrules` or `AGENTS.md`
+3.  Tell the agent to read the `.cursorrules` and `AGENTS.md` files in the first message and periodically throughout the conversation.
+4.  This "primes" the model with the role, rules, and syntax preferences defined in the skill.
+
+### 2. For Coding Assistants (Cursor, VS Code)
+Ensure the `.cursorrules` file is present in your project root.
+-   **Explicit Activation**: If the agent seems lost, type: *"@rules Read the Dremio Skill documentation in `dremio-skill/SKILL.md` before answering."*
+-   **File References**: When asking about specific features, reference the knowledge file if you know it (e.g., *"How do I do this using `dremioframe`? Check `knowledge/python/tree.md`"*).
+
+### 3. General "Golden Rules"
+-   **Be Specific**: Instead of "Make a script", say "Make a **dremioframe** script to..."
+-   **Correction**: If the AI hallucinates a function (like `query_to_pandas`), correct it: *"That method doesn't exist. Check `knowledge/python/tree.md` for the correct `client.query()` syntax."*
+
+### 4. For online chat interfaces
+- Tell the agent to learn the dremio skill by reading the online repo `https://github.com/developer-advocacy-dremio/dremio-agent-skill` and and to start with the `SKILL.md` file at `https://github.com/developer-advocacy-dremio/dremio-agent-skill/blob/main/dremio-skill/SKILL.md`
