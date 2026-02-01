@@ -25,18 +25,19 @@ Key directories:
 
 ### 1. Dremio CLI
 Use the CLI for administrative tasks, content management, and CI/CD workflows.
-- **Reference**: `knowledge/cli` (see details in knowledge-tree.md)
+- **Reference**: `knowledge/cli/tree.md` (Updated with new Auth Flows)
 - **Bootstrapping**: 
-    - If a command fails with "No profile found", **automatically** suggest creating one using the environment variables from `.env` (python.md standards).
+    - If a command fails with "No profile found", **automatically** suggest creating one using the environment variables from `.env`.
+    - **Supports**: `pat` (Cloud/Software), `oauth` (Cloud Service User), `username_password` (Legacy Software).
     - Example Command: 
       ```bash
-      # Cloud
-      dremio profile create --name cloud --base-url $DREMIO_ENDPOINT --token $DREMIO_PAT --project-id $DREMIO_PROJECT_ID
+      # Cloud (PAT)
+      dremio profile create --name cloud --type cloud --base-url $DREMIO_ENDPOINT --auth-type pat --token $DREMIO_PAT --project-id $DREMIO_PROJECT_ID
       ```
 - **Common Tasks**: 
-    - Constructing connection profiles.
+    - Constructing connection profiles (`~/.dremio/profiles.yaml`).
     - Exporting/Importing catalog content.
-    - Managing users and roles (if standard CLI).
+
 
 ### 2. Dremio Python SDK (dremioframe)
 Use the Python SDK for scripting data operations, automation, and data engineering workflows.
